@@ -181,6 +181,7 @@ html {
 }
 .container-4-0 {
     display: flex;
+    flex-wrap: wrap;
 }
 .container-4-1, .container-4-2 {
     width: 50%;
