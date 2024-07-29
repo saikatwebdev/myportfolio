@@ -31,94 +31,91 @@ html {
     color: gold;
     background-color: grey;
 }
-.sidebar {
+/* Navbar container */
+.navbar {
+    display: flex;
+    align-items: center;
+    background :transparent;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(40px);
     position: sticky;
     top: 0;
     left: 0;
-    width: 80px;
-    height: 100%;
-    background: transparent;
-    box-shadow: 20px;
-    backdrop-filter: blur(20px);
-    padding: 6px 14px;
-    transition: .5s;
-    z-index: 1;
+    width: 100%;
+    z-index: 1000;
 }
-.sidebar.active {
-   width: 260px; 
-}
-.sidebar .logo-menu {
+
+.logo-menu {
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 70px;
+    margin-right: auto;
 }
-.sidebar .logo-menu .logo {
+
+.logo {
     font-size: 25px;
     color: #fff;
-    pointer-events:none;
-    opacity: 0;
-    transition: .5s;
+    margin-right: 20px;
 }
-.sidebar.active .logo-menu .logo {
-    opacity: 1;
-    transition-delay: .3s;
-}
-.sidebar .logo-menu .toggle-btn {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
+
+.toggle-btn {
     font-size: 22px;
     color: #fff;
-    text-align: center;
-    line-height: 40px;
     cursor: pointer;
-    transition: .5s;
+    display: none; /* Hide toggle button for horizontal navbar */
 }
-.sidebar.active .logo-menu .toggle-btn {
-    left: 90%;
-}
-.sidebar .list {
-    margin-top: 10px;
-}
-.list .list-item {
+
+.nav-list {
+    display: flex;
     list-style: none;
-    width: 100%;
-    height: 50px;
-    margin: 5px 0;
-    white-space: nowrap;
 }
-.list .list-item a {
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-item a {
     display: flex;
     align-items: center;
     font-size: 18px;
     color: #fff;
     text-decoration: none;
     border-radius: 6px;
-    transition: .5s ;
+    transition: background 0.3s;
+    padding: 5px 10px;
 }
-.list .list-item.active a,
-.list .list-item a:hover {
-    background: rgba(255, 255, 255, .2);
+
+.nav-item a:hover, .nav-item.active a {
+    background: rgba(255, 255, 255, 0.2);
+    border-bottom: aqua;
 }
-.list .list-item a i {
-    min-width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
+
+.nav-item a i {
+    margin-right: 8px;
 }
-.sidebar .link-name {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .3s;
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .toggle-btn {
+        display: block;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hide nav items initially */
+    }
+    
+    .nav-list.active {
+        display: flex;
+    }
 }
-.sidebar.active .link-name {
-    opacity: 1;
-    pointer-events: auto;
-    transition-delay: calc(.07s * var(--i));
-}
+
 .container, .container-2, .container-3 {
     margin-left: 30%;
     padding: 0; 
@@ -263,9 +260,10 @@ html {
 }
 .myprojects {
     display: flex;
+    flex-wrap: wrap;
     margin-left: 10%;
     margin-right: 10%;
-    height: 60vh;
+    height: 40rem;
     background: transparent;
     border: 5px solid aqua;
     border-radius: 15px;
@@ -374,4 +372,3 @@ html {
 .rate-me-section button:hover {
     background-color: #045d3a;
 }
-
