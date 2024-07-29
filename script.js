@@ -1,9 +1,11 @@
-const sidebar  = document.querySelector('.sidebar');
+const navbar = document.querySelector('.navbar');
 const toggleBtn = document.querySelector('.toggle-btn');
 
 toggleBtn.addEventListener('click', () => {
-    sidebar.classList.toggle('active');
+    const navList = document.querySelector('.nav-list');
+    navList.classList.toggle('active');
 });
+
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
