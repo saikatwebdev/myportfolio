@@ -262,21 +262,42 @@ html {
 .myprojects {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* Center the content */
     margin-left: 10%;
     margin-right: 10%;
-    height: 40rem;
     background: transparent;
     border: 5px solid aqua;
     border-radius: 15px;
 }
 
+/* Styles for medium to large screens */
 .project-1, .project-2 {
     margin: 5%;
-    padding:5px;
+    padding: 5px;
     height: 40vh;
     width: 30vw;
-    border : 5px solid green;
+    border: 5px solid green;
     border-radius: 15px;
+}
+
+/* Styles for smaller screens */
+@media (max-width: 1024px) {
+    .project-1, .project-2 {
+        width: 40vw;
+    }
+}
+
+/* Styles for very small screens (e.g., phones) */
+@media (max-width: 600px) {
+    .myprojects {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .project-1, .project-2 {
+        width: 80vw;
+        margin: 2% 0;
+    }
 }
 
 .hireme, .message {
