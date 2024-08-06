@@ -35,7 +35,7 @@ html {
 .navbar {
     display: flex;
     align-items: center;
-    background :transparent;
+    background :black;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(40px);
@@ -259,7 +259,8 @@ html {
         width: 50%;
     }
 }
-.myprojects {
+
+.myproject {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Center the content */
@@ -270,6 +271,7 @@ html {
     border-radius: 15px;
 }
 
+
 /* Styles for medium to large screens */
 .project-1, .project-2 {
     margin: 5%;
@@ -278,6 +280,7 @@ html {
     width: 30vw;
     border: 5px solid green;
     border-radius: 15px;
+    overflow: hidden;
 }
 
 /* Styles for smaller screens */
@@ -299,6 +302,8 @@ html {
         margin: 2% 0;
     }
 }
+
+
 
 .hireme, .message {
     text-align: center;
