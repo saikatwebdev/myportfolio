@@ -351,6 +351,7 @@ html {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width:100%;
 }
 #contact-form button:hover {
     background-color: orangered;
@@ -390,7 +391,7 @@ html {
 
 .rate-me-section button {
     padding: 10px;
-    background-color: #04AA6D;
+    background-color: aqua;
     color: white;
     border: none;
     border-radius: 5px;
@@ -398,5 +399,5 @@ html {
 }
 
 .rate-me-section button:hover {
-    background-color: #045d3a;
+    background-color: orangered;
 }
